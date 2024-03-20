@@ -1,0 +1,102 @@
+﻿p {
+    margin: 0;
+}
+
+.contact-main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 50px;
+}
+
+.contact-us-text-container {
+    color: darkorange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid darkorange;
+    margin: 0 0 20px 50px;
+    font-size: 20px;
+}
+
+.row-input-container {
+    display: flex;
+}
+
+.label-container {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.input-container {
+    flex: 4;
+    display: flex;
+    align-items: center;
+}
+
+.contact-label-describe {
+    color: orange;
+    margin-right: 30px;
+}
+
+.row-inputs {
+    font-family: Roboto;
+    height: 24px;
+    width: 400px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    overflow: auto;
+    background: #470047;
+    border-color: #a000ff;
+    color: #eeb168;
+    resize: none;
+}
+
+.row-inputs:-webkit-autofill {
+    -webkit-text-fill-color: #eeb168;
+    transition: background-color 10000s ease-in-out 0s;
+}
+
+.row-input-message {
+    height: 300px;
+}
+
+/* Track */
+.row-inputs:focus::-webkit-scrollbar,
+.row-inputs::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+.row-inputs:focus::-webkit-scrollbar-thumb,
+.row-inputs::-webkit-scrollbar-thumb {
+    background: #f13535;
+}
+
+/* Handle on hover */
+.row-inputs:focus::-webkit-scrollbar-thumb:hover,
+.row-inputs::-webkit-scrollbar-thumb:hover {
+    background: #51e313ff;
+}
+
+.submit-button {
+    margin-top: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: orange;
+    border: none;
+    background-color: #5d2a72;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #431e52;
+}

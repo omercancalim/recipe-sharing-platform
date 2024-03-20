@@ -1,0 +1,293 @@
+﻿p {
+    margin: 0;
+}
+
+.recipe-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    grid-row-gap: 15px;
+    padding: 0 120px;
+}
+
+.recipe-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-image {
+    flex: 1;
+    border-radius: 20px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.recipe-header-image-text {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 1, 75, 0.85));
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 30px;
+    position: absolute;
+}
+
+.recipe-header-text {
+    padding: 340px 20px 0 25px;
+}
+
+.recipe-ingredient-container,
+.recipe-recipe-container {
+    font-size: 25px;
+    color: #ff7d00;
+}
+
+.recipe-ingredient-container p,
+.recipe-recipe-container p {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #CC5C33;
+}
+
+.comment-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 100px;
+    margin-bottom:30px;
+    border-bottom: 1px solid orange;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    color: #de27ff;
+}
+
+.comment-icon {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    width: 40px;
+    opacity: 1;
+}
+
+.comment-icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.comment-button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    object-fit: cover;
+    padding: 0;
+}
+
+.comment-button .tooltip {
+    position: absolute;
+    bottom: -50px;
+    left: -31px;
+    background-color: #3a3a3a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.comment-button:hover .tooltip {
+    opacity: 0.8;    
+}
+
+.main-comment-box-container {
+    display: none;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-row-gap: 20px;
+    border-radius: 20px;
+    padding: 15px 40px 15px 20px;
+    background-color: #470047;
+}
+
+.comment-box-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-box-top-inside-container {
+    flex: 1;
+}
+
+.star-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: auto;
+}
+
+.comment-box-label {
+    margin-right: 10px;
+}
+
+.mail-label {
+    margin-left: 30px;
+}
+
+.comment-box-text-boxes {
+    background-color: transparent;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fffdb4;
+    font-size: 18px;
+    overflow: auto;
+    resize: none;
+}
+
+.comment-box-text-boxes:-webkit-autofill {
+    -webkit-text-fill-color: #fffdb4;
+    transition: background-color 10000s ease-in-out 0s;
+}
+
+.comment-box-text-boxes::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comment-box-text-boxes::-webkit-scrollbar-thumb {
+    background: #f13535;
+}
+
+.comment-box-text-boxes::-webkit-scrollbar-thumb:hover {
+    background: #51e313ff;
+}
+
+.apply-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment-apply-button {
+    border: none;
+    color: white;
+    background-color: purple;
+    height: 30px;
+    width: 60px;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.comment-apply-button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.main-comment-box {
+    width: 100%;
+    font-family: Roboto;
+}
+
+.main-comment-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 90px;
+}
+
+.comment-user-pp {
+    width: 100%;
+    border-radius: 90px;
+}
+
+.comment-user-info-container {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: start;
+}
+
+.comment-user-info-top {
+    display: flex;
+    border-bottom: 1px solid orange;
+    padding-bottom: 6px;
+}
+
+.comment-user-info-name {
+    flex: 1;
+}
+
+.comment-user-info-date {
+    flex: 3;
+}
+
+.comment-user-info-bottom {
+    margin-top: 9px;
+}
+
+.make-it-visible-but-grid {
+    display: grid;
+}
+
+.rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    position: relative;
+}
+
+.stars i {
+    cursor: pointer;
+    color: gray;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.stars i.active {
+    color: orange;
+}
+
+.stars i.horev {
+    color: #a86700;
+    opacity: 1;
+}
+
+.radio-button-groups {
+    display: none;
+}
+
+.stars span {
+    position: absolute;
+    bottom: calc(100% + -80px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: orange;
+    background-color: #470047;
+    border: 1px solid gray;
+    text-align: center;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.stars span::before {
+    content: "";
+    color: white;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent gray transparent;
+    border-style: solid;
+    width: 0;
+    height: 0;
+}
+
+.makeTooltipHidden {
+    visibility: hidden;
+    opacity: 0;
+}

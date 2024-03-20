@@ -1,0 +1,223 @@
+﻿p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(40, 18, 49);
+    font-family: Poppins, Roboto, Arial;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.closed .vertical {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(-90deg);
+    background-color: lawngreen;
+}
+
+.closed .horizontal {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+    background-color: lawngreen;
+}
+
+.opened {
+    opacity: 1;
+}
+
+.opened .vertical {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(90deg);
+    background-color: red;
+}
+
+.opened .horizontal {
+    transition: all 0.4s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+    background-color: red;
+}
+
+.circle-plus {
+    height: auto;
+    width: auto;
+    opacity: .8;
+}
+
+.circle-plus .circle {
+    position: relative;
+    width: 2.55em;
+    height: 2.5em;
+}
+
+.circle-plus .circle .horizontal {
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    margin-left: -12.5px;
+    margin-top: -2.5px;
+}
+
+.circle-plus .circle .vertical {
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    left: 50%;
+    top: 50%;
+    margin-top: -12.5px;
+    margin-left: -2.5px;
+}
+
+.main-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 30px 0 30px;
+}
+
+.specific-radius {
+    border-radius: 10px;
+}
+
+.suggested-recipes-container,
+.user-comments-container {
+    width: 400px;
+    background-color: #4f0e4f;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.suggested-recipes-container {
+    margin: 10px 0 5px 0;
+}
+
+.user-comments-container {
+    margin: 0 0 5px 0;
+}
+
+.suggested-recipes-container:hover,
+.user-comments-container:hover {
+    opacity: .9;
+}
+
+.suggested-recipes,
+.user-comments {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.each-recipe,
+.each-comment {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #470047;
+    align-items: center;
+    width: 500px;
+    padding-left: 10px;
+    background-color: rgba(115, 9, 115, 1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.each-recipe:hover,
+.each-comment:hover {
+    background-color: rgba(115, 9, 115, 0.50);
+}
+
+.buttons {
+    font-size: 16px;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid orange;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+.accept:hover {
+    background-color: green;
+    border-color: green;
+}
+
+.decline:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.gray-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(25, 25, 25, 0.6);
+    z-index: 98;
+    display: none;
+}
+
+.test3, .test4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    width: auto;
+    max-height: 100vh;
+    height: auto;
+    z-index: 99;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: auto;
+    display: none;
+}
+
+.test3::-webkit-scrollbar,
+.test4::-webkit-scrollbar {
+    width: 6px; /* width of the scrollbar */
+}
+
+.test3::-webkit-scrollbar-thumb,
+.test4::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 165, 0, 0.6); /* color of the thumb */
+    border-top-right-radius: 6px; /* roundness of the thumb */
+    border-bottom-right-radius: 6px;
+}
+
+.test3::-webkit-scrollbar-track,
+.test4::-webkit-scrollbar-track {
+    background-color: rgba(255, 165, 0, 0.4); /* color of the track */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.test, .test5 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    background-color: #470047;
+    padding: 10px;
+    color: #ff812f;
+    display: none;
+}
+
+.test p, .test5 p {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.recipe-image-preview {
+    width: 100%;
+}

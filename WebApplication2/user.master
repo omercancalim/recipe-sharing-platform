@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="user.master.cs" Inherits="WebApplication2.user" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link rel="stylesheet" href="Styles/master.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header-container"></div>
+
+        <div class="header-tab-container">
+            <div class="tab-option-container">
+                <a class="tab-option" href="/View/home.aspx">
+                    Home
+                </a>
+            </div>
+            <div class="tab-option-container category-specific-container">
+                <div class="tab-option">
+                    Categories
+                </div>
+                <div class="categories-container">
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <ItemTemplate>
+                            <a href="/View/category_recipe.aspx?CategoryId=<%# Eval("CategoryId") %>&CategoryName=<%# Eval("CategoryName") %>" class="category-anchor">
+                                <div class="categories-name" runat="server">
+                                    <%# Eval("CategoryName") %> (<%# Eval("CategoryQuantity") %>)
+                                </div>
+                            </a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </div>
+            <div class="tab-option-container">
+                <a class="tab-option" href="/View/suggest_recipe.aspx">
+                    Suggest Recipe
+                </a>
+            </div>
+            <div class="tab-option-container">
+                <a class="tab-option" href="/View/contact.aspx">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+    
+</body>
+</html>

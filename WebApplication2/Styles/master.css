@@ -1,0 +1,123 @@
+﻿body {
+    font-family: Roboto, Arial;
+    margin: 0;
+    background-color: rgb(40, 18, 49);
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #300056;
+    height: 80px;
+    z-index: 99999;
+}
+
+.header-tab-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 80px;
+    padding-bottom: 5px;
+    background-color: #300056;
+    flex-direction: row;
+    z-index: 99999;
+}
+
+.tab-option-container {
+    flex: 1;
+    height: 30px;
+}
+
+.tab-option {
+    display: flex;
+    font-size: 17px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #6d00a7;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.tab-option:hover {
+    background-color: #4f007a;
+}
+
+.category-specific-container {
+    position: relative;
+    transition: display 1.5s;
+}
+
+.category-specific-container:hover .categories-container {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.categories-container {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-align: center;
+    z-index: 90;
+    pointer-events: none;
+}
+
+.category-anchor {
+    text-decoration: none;
+    color: inherit;
+}
+
+.categories-name {
+    padding: 10px 0;
+    background-color: #6d00a7;
+    transition: background-color 0.3s;
+}
+
+.categories-name:hover {
+    background-color: #4f007a;
+    color: orange;
+    text-decoration: underline;
+}
+
+.main-container {
+    margin: 0;
+    padding-top: 120px;
+}
+
+.limit-text-1-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #ff6a00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a44400;
+}

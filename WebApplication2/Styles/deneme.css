@@ -1,0 +1,37 @@
+﻿body {
+    font-family: Poppins, Arial;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-box {
+    position: relative;
+    margin-top: 500px;
+}
+
+.rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.stars i {
+    cursor: pointer;
+    color: gray;
+    transition: 0.3s;
+}
+
+.stars i.active {
+    color: orange;
+}
+
+.stars i.horev {
+    color: #a86700;
+    opacity: 1;
+}
+
+.radio-button-groups {
+    display: none;
+}

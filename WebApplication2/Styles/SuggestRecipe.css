@@ -1,0 +1,144 @@
+﻿body {
+    font-family: Roboto, Arial;
+}
+
+.suggest-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    background-color: #281231;
+}
+
+.suggest-main-container p {
+    margin: 0;
+}
+
+.row-container {
+    display: grid;
+    grid-template-columns: 200px 600px;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-color: darkorange;
+    padding: 10px 0;
+    border:none;
+}
+
+.row-container:nth-last-child(-n+1) {
+    border: none;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+.row-inputs {
+    font-family: Roboto;
+    height: 24px;
+    max-height: 100px;
+    max-width: 300px;
+    width: 200px;
+    padding: 5px 10px 0 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    overflow: auto;
+    resize: none;
+    background: #470047;
+    border-color: #a000ff;
+    color: #eeb168;
+}
+
+.row-inputs:focus {
+    max-width: 500px;
+    width: 500px;
+    max-height: 300px;
+}
+
+.row-mail-input {
+    padding: 2px 10px;
+}
+
+.row-inputs:-webkit-autofill {
+    -webkit-text-fill-color: #eeb168;
+    transition: background-color 10000s ease-in-out 0s;
+}
+
+/* Track */
+.row-inputs:focus::-webkit-scrollbar,
+.row-inputs::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+.row-inputs:focus::-webkit-scrollbar-thumb,
+.row-inputs::-webkit-scrollbar-thumb {
+    background: #f13535;
+}
+
+/* Handle on hover */
+.row-inputs:focus::-webkit-scrollbar-thumb:hover,
+.row-inputs::-webkit-scrollbar-thumb:hover {
+    background: #51e313ff;
+}
+
+.apply-button {
+    margin-top: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: orange;
+    border: none;
+    background-color: #5d2a72;
+    transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+    background-color: #431e52;
+}
+
+.row-text-container {
+    display: flex;
+}
+
+.row-text {
+    flex: 1;
+    text-align: right;
+    color: orange;
+}
+
+.row-input-container {
+    margin-left: 20px;
+    position: relative;
+}
+
+.file-upload {
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+.hide-file-upload-text {
+    position: absolute;
+    background-color: rgb(40, 18, 49);
+    height: 25px;
+    width: 100%;
+    left: 100px;
+    bottom: 1px;
+}
+
+.selector {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 3px 5px 2px 5px;
+    width: 100%;
+    max-width: 200px;
+    background: #470047;
+    border-color: #a000ff;
+    color: #eeb168;
+}
